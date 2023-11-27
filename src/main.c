@@ -55,6 +55,11 @@ int main(int argc, char** argv) {
 
     FILE* file = fopen(filename, "r");
 
+    if (file == NULL) {
+        printf("couldn't open this file\n");
+        return 1;
+    }
+
     char buffer[100];
     char* text = malloc(sizeof(char));
     text[0] = '\0';

@@ -137,5 +137,9 @@ int main(int argc, char** argv) {
             circle_point.center.y, reverse_point.x, reverse_point.y);
     }
 
+    free(text);
+    free(circle_points);
+    free(by_line);
+
     return 0;
 }

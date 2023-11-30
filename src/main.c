@@ -118,6 +118,8 @@ int main(int argc, char** argv) {
         }
 
         circle_points[circle_points_count - 1] = circle_point;
+
+        free(by_space);
     }
 
     for (int i = 0; i < circle_points_count; i++) {
@@ -140,6 +142,7 @@ int main(int argc, char** argv) {
     free(text);
     free(circle_points);
     free(by_line);
+    fclose(file);
 
     return 0;
 }
